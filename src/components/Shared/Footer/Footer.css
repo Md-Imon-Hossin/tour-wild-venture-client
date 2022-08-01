@@ -1,0 +1,25 @@
+.footer{
+    background-color: #F5F7FA;
+}
+.footer-top{
+    border-bottom: 1px solid #ddd;
+}
+.footer-top p{
+    color: #666;
+
+}
+.footer-top ul{
+    list-style: none;
+    padding-left: 0;
+}
+.footer-top ul li{
+padding: 0.3rem 0;
+cursor: pointer;
+color: #666;
+}
+.footer-top ul li:hover{
+   text-decoration: underline;
+}
+.footer-bottom p{
+    color: #666;
+}
