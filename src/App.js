@@ -30,8 +30,6 @@ function App() {
               <Route exact path="/" element={<Home />} />
               <Route path="/home" element={<Home />} />
 
-
-              {/* private route start */}
               <Route path="/placeOrder" element={
                 <PrivateRoute>
                   <PlaceOrder></PlaceOrder>
@@ -45,8 +43,7 @@ function App() {
                 </PrivateRoute>
               }
               />
-              {/* private route end*/}
-
+             
 
               <Route path="/services/addService" element={<AddService />} />
 
