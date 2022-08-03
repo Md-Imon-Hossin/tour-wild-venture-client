@@ -16,7 +16,7 @@ const Services = () => {
             <h2 className='mb-5 text-warning'>Our Services  </h2>
             <Container>
                 {  
-              services.length===0 ?   <div className='text-center'>
+              services?.length === 0 ?   <div className='text-center'>
                 <Spinner animation="border" variant="dark" className='mb-3' />
                </div>
                 : 

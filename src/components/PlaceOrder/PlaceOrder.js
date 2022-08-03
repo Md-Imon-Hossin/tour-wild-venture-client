@@ -9,9 +9,10 @@ import axios from 'axios';
 import useAuth from '../../hooks/useAuth';
 
 const PlaceOrder = () => {
-    const [service, setService] = useState({})
+    const [service, setService] = useState({});
+    const email = sessionStorage.getItem("email");
     const { id } = useParams();
-    const { user } = useAuth();
+    // const { user } = useAuth();
 
     useEffect(() => {
         const url = `https://obscure-sierra-26455.herokuapp.com/services/${id}`
@@ -24,9 +25,11 @@ const PlaceOrder = () => {
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
+        data.email = email;
         console.log(data);
         axios.post("https://obscure-sierra-26455.herokuapp.com/orders", data)
             .then(res => {
+                // console.log(res);
                 if (res.data.insertedId) {
                     alert('order successfully placed');
 
@@ -40,7 +43,6 @@ const PlaceOrder = () => {
             <Container>
                 <h2 className='mb-5'>Place Order</h2>
                 <Row>
-
                     <Col lg={7}>
                         <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -52,7 +54,7 @@ const PlaceOrder = () => {
                             <br />
                             <br />
 
-                            <input defaultValue={user?.email} {...register("email", { required: true })} placeholder="Email" className="w-75" />
+                            <input defaultValue={email} {...register("email", { required: true })} placeholder="Email" className="w-75" />
                             <br />
                             <br />
 
@@ -63,15 +65,12 @@ const PlaceOrder = () => {
 
                             <textarea defaultValue={service?.description} {...register("description", { required: true })} placeholder="Description" className="w-75" />
 
-
                             <br />
                             <br />
 
                             <input className='btn btn-warning' type="submit" />
-
                         </form>
                     </Col>
-
 
                     <Col lg={5}>
                         <Card className='border-0'>
@@ -83,12 +82,9 @@ const PlaceOrder = () => {
                                 </Card.Text>
                             </Card.Body>
                         </Card>
-
                     </Col>
                 </Row>
             </Container>
-
-
         </div>
     );
 };

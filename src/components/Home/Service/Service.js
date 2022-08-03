@@ -3,9 +3,8 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
-
 import "./Service.css";
-import useAuth from '../../../hooks/useAuth';
+
 const Service = (props) => {
     // console.log(props.service);
     const { _id, image, name, description } = props.service;

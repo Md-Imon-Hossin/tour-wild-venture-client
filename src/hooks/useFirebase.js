@@ -5,7 +5,6 @@ import initializeAuthentication from "../Firebase/firebase.initialize.js";
 initializeAuthentication();
 
 
-
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState(" ");
@@ -22,9 +21,8 @@ const useFirebase = () => {
                 const destination = location.state?.from || '/';
                 history(destination);
                 // The signed-in user info.
-                console.log(result.user);
-                setUser(result.user)
-
+                setUser(result.user);
+                sessionStorage.setItem("email", result.user.email);
             })
             .catch((error) => {
                 setError(error.message)

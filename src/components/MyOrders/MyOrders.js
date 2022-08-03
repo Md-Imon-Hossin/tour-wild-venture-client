@@ -7,9 +7,11 @@ import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 
 const MyOrders = () => {
-    const [orders, setorders] = useState([])
+    const email = sessionStorage.getItem("email");
+    const [orders, setorders] = useState([]);
+    
     useEffect(() => {
-        fetch("https://obscure-sierra-26455.herokuapp.com/orders")
+        fetch(`https://obscure-sierra-26455.herokuapp.com/orders/${email}`)
             .then(res => res.json())
             .then(data => setorders(data));
     }, [])
@@ -37,7 +39,7 @@ const MyOrders = () => {
 
     return (
         <div className='py-4'>
-            <h2 className='mb-4'>Place My Orders: {orders.length} </h2>
+            <h2 className='mb-4'>My Orders: {orders.length} </h2>
             <Container>
                 <Row xs={1} md={2} lg={3} className="g-4">
 
