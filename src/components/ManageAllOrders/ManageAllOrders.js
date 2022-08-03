@@ -8,7 +8,7 @@ import Spinner from 'react-bootstrap/Spinner';
 const ManageAllOrders = () => {
     const [manageOrders, setManageOrders] = useState([])
     useEffect(() => {
-        fetch("http://localhost:5000/allOrders")
+        fetch("https://obscure-sierra-26455.herokuapp.com/allOrders")
             .then(res => res.json())
             .then(data => setManageOrders(data))
     }, [])

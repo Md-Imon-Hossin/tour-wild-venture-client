@@ -13,7 +13,7 @@ const PlaceOrder = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `http://localhost:5000/services/${id}`
+        const url = `https://obscure-sierra-26455.herokuapp.com/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data))
@@ -24,7 +24,7 @@ const PlaceOrder = () => {
     const onSubmit = data => {
         data.email = email;
         console.log(data);
-        axios.post("http://localhost:5000/orders", data)
+        axios.post("https://obscure-sierra-26455.herokuapp.com/orders", data)
             .then(res => {
                 // console.log(res);
                 if (res.data.insertedId) {
