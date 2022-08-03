@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import MyOrder from '../MyOrder/MyOrder';
 import Row from 'react-bootstrap/Row';
 import { Container } from 'react-bootstrap';
 import Card from 'react-bootstrap/Card';
@@ -9,9 +8,9 @@ import Button from 'react-bootstrap/Button';
 const MyOrders = () => {
     const email = sessionStorage.getItem("email");
     const [orders, setorders] = useState([]);
-    
+
     useEffect(() => {
-        fetch(`https://obscure-sierra-26455.herokuapp.com/orders/${email}`)
+        fetch(`http://localhost:5000/orders/${email}`)
             .then(res => res.json())
             .then(data => setorders(data));
     }, [])
@@ -20,7 +19,7 @@ const MyOrders = () => {
     const handleDeleteUser = id => {
     const proceed = window.confirm("Are you sure, you want to delete?");
     if(proceed){
-        const url = `https://obscure-sierra-26455.herokuapp.com/orders/${id}`
+        const url = `http://localhost:5000/orders/${id}`
         fetch(url, {
             method: 'DELETE'
         })

@@ -6,16 +6,16 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import useAuth from '../../hooks/useAuth';
+
 
 const PlaceOrder = () => {
     const [service, setService] = useState({});
     const email = sessionStorage.getItem("email");
     const { id } = useParams();
-    // const { user } = useAuth();
+    
 
     useEffect(() => {
-        const url = `https://obscure-sierra-26455.herokuapp.com/services/${id}`
+        const url = `http://localhost:5000/services/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data))
@@ -27,7 +27,7 @@ const PlaceOrder = () => {
     const onSubmit = data => {
         data.email = email;
         console.log(data);
-        axios.post("https://obscure-sierra-26455.herokuapp.com/orders", data)
+        axios.post("http://localhost:5000/orders", data)
             .then(res => {
                 // console.log(res);
                 if (res.data.insertedId) {
@@ -61,7 +61,6 @@ const PlaceOrder = () => {
                             <input {...register("address", { required: true })} placeholder="Address" className="w-75" />
                             <br />
                             <br />
-
 
                             <textarea defaultValue={service?.description} {...register("description", { required: true })} placeholder="Description" className="w-75" />
 

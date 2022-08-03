@@ -18,7 +18,7 @@ const AddService = () => {
         const newService = { image, name, description };
 
         // Send data to the server
-        fetch("https://obscure-sierra-26455.herokuapp.com/services", {
+        fetch("http://localhost:5000/services", {
             method: 'POST', headers: {
                 'Content-Type': 'application/json'
             },
