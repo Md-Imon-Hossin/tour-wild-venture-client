@@ -4,7 +4,6 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signO
 import initializeAuthentication from "../Firebase/firebase.initialize.js";
 initializeAuthentication();
 
-
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState(" ");
@@ -40,7 +39,6 @@ const useFirebase = () => {
         })
             .finally(() => setIsLoading(false));
     }
-
 
     // Simple onAuth state change 
     useEffect(() => {

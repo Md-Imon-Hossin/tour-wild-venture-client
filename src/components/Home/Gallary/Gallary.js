@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container ,Row, Col} from 'react-bootstrap';
+import { Container, Row, Col } from 'react-bootstrap';
 import "./Gallary.css";
 import gallary1 from "../../../images/img1.jpg"
 import gallary2 from "../../../images/img13.jpg"
@@ -18,29 +18,27 @@ const Gallary = () => {
             <Container>
                 <Row>
                     <Col lg={4}>
-<img className='w-100 mb-3' src={gallary1} alt="" />
-<img className='w-100 mb-3' src={gallary2} alt="" />
-<img className='w-100 mb-3' src={gallary3} alt="" />
-
+                        <img className='w-100 mb-3' src={gallary1} alt="" />
+                        <img className='w-100 mb-3' src={gallary2} alt="" />
+                        <img className='w-100 mb-3' src={gallary3} alt="" />
 
                     </Col>
 
-
                     <Col lg={4}>
 
-         <img className='w-100 mb-3' src={gallary4} alt="" />
-<img className='w-100 mb-3' src={gallary5} alt="" />
-<img className='w-100 mb-3' src={gallary6} alt="" />
+                        <img className='w-100 mb-3' src={gallary4} alt="" />
+                        <img className='w-100 mb-3' src={gallary5} alt="" />
+                        <img className='w-100 mb-3' src={gallary6} alt="" />
                     </Col>
 
                     <Col lg={4}>
-<img className='w-100 mb-3' src={gallary7} alt="" />
-<img className='w-100 mb-3' src={gallary8} alt="" />
-<img className='w-100 mb-3' src={gallary9} alt="" />
+                        <img className='w-100 mb-3' src={gallary7} alt="" />
+                        <img className='w-100 mb-3' src={gallary8} alt="" />
+                        <img className='w-100 mb-3' src={gallary9} alt="" />
                     </Col>
                 </Row>
             </Container>
-            
+
         </div>
     );
 };

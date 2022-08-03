@@ -17,22 +17,22 @@ const MyOrders = () => {
 
     // delete an user
     const handleDeleteUser = id => {
-    const proceed = window.confirm("Are you sure, you want to delete?");
-    if(proceed){
-        const url = `http://localhost:5000/orders/${id}`
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount > 0) {
-                    alert("Deleted Successfully");
-                    const remainingUsers = orders.filter(order=> order._id !== id)
-                    setorders(remainingUsers);
-
-                }
+        const proceed = window.confirm("Are you sure, you want to delete?");
+        if (proceed) {
+            const url = `http://localhost:5000/orders/${id}`
+            fetch(url, {
+                method: 'DELETE'
             })
-    }
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount > 0) {
+                        alert("Deleted Successfully");
+                        const remainingUsers = orders.filter(order => order._id !== id)
+                        setorders(remainingUsers);
+
+                    }
+                })
+        }
 
     }
 

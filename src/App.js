@@ -24,6 +24,7 @@ function App() {
     <div className="App">
       <AuthProvider>
         <BrowserRouter>
+
           <Header></Header>
           <div>
             <Routes>
@@ -34,7 +35,6 @@ function App() {
                 <PrivateRoute>
                   <PlaceOrder></PlaceOrder>
                 </PrivateRoute>
-
               } />
 
               <Route path='/placeOrder/:id' element={
@@ -43,7 +43,6 @@ function App() {
                 </PrivateRoute>
               }
               />
-             
 
               <Route path="/services/addService" element={<AddService />} />
 
@@ -56,7 +55,9 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
+
           <Footer></Footer>
+
         </BrowserRouter>
       </AuthProvider>
     </div>

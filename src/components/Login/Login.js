@@ -7,13 +7,13 @@ import { useLocation, useNavigate } from 'react-router-dom';
 // import { useLocation, useNavigate } from 'react-router-dom';
 
 const Login = () => {
-    
-    const { signInUsingGoogle} = useAuth();
+
+    const { signInUsingGoogle } = useAuth();
     const location = useLocation();
     const history = useNavigate();
     const handleLogIn = () => {
-        signInUsingGoogle(location,history);
-            
+        signInUsingGoogle(location, history);
+
     }
 
     return (
@@ -23,10 +23,10 @@ const Login = () => {
             <br />
             <br />
 
-            <Button 
-            onClick={handleLogIn}
-            // onClick={handleGoogleLogIn}
-             className='mt-3' variant='warning' >Google SignIn</Button>
+            <Button
+                onClick={handleLogIn}
+                className='mt-3' variant='warning' >Google SignIn
+            </Button>
         </div>
     );
 };

@@ -26,7 +26,6 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto header-menu">
 
-
               <NavLink
                 to="/home"
                 style={({ isActive }) =>
@@ -66,7 +65,7 @@ const Header = () => {
                       isActive ? activeStyle : undefined
                     }
                   >
-                   MyOrders
+                    MyOrders
                   </NavLink>
 
                   <NavLink
@@ -75,16 +74,11 @@ const Header = () => {
                       isActive ? activeStyle : undefined
                     }
                   >
-                   ManageAllOrders
+                    ManageAllOrders
                   </NavLink>
-
-
                 </div>
 
-
-
               }
-
 
               <NavLink
                 to="/login"
@@ -95,8 +89,7 @@ const Header = () => {
                 LogIn
               </NavLink>
               <span className='text-white me-3'> {user?.displayName}</span>
-              {user?.email && <Button  onClick={logOut} variant='warning'>LogOut</Button>}
-
+              {user?.email && <Button onClick={logOut} variant='warning'>LogOut</Button>}
 
             </Nav>
           </Navbar.Collapse>

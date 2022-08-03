@@ -7,12 +7,10 @@ import Row from 'react-bootstrap/Row';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 
-
 const PlaceOrder = () => {
     const [service, setService] = useState({});
     const email = sessionStorage.getItem("email");
     const { id } = useParams();
-    
 
     useEffect(() => {
         const url = `http://localhost:5000/services/${id}`
@@ -21,7 +19,6 @@ const PlaceOrder = () => {
             .then(data => setService(data))
 
     }, [])
-
 
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
@@ -36,7 +33,6 @@ const PlaceOrder = () => {
                 }
             })
     };
-
 
     return (
         <div className='py-5'>

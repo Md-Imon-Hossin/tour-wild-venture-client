@@ -6,9 +6,9 @@ import banner3 from "../../../images/img3.jpg";
 import "./Banner.css"
 
 const Banner = () => {
-    return (
-        <div className='banner'>
-<Carousel >
+  return (
+    <div className='banner'>
+      <Carousel >
         <Carousel.Item>
           <img
             className="d-block w-100"
@@ -26,7 +26,7 @@ const Banner = () => {
             src={banner2}
             alt="Second slide"
           />
-  
+
           <Carousel.Caption className='text-dark'>
             <h3>Discover a whole new world of fun</h3>
             <p>Thers's nothing more exciting than spending a whole day in our amazing waterpark</p>
@@ -38,18 +38,18 @@ const Banner = () => {
             src={banner3}
             alt="Third slide"
           />
-  
-          <Carousel.Caption className='text-dark'> 
+
+          <Carousel.Caption className='text-dark'>
             <h3>A perfect weekend for kids and adults</h3>
             <p>
-             We provide amazing experiences and create safe adventures for you at the same time.
+              We provide amazing experiences and create safe adventures for you at the same time.
             </p>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
-        </div>
-        
-    );
+    </div>
+
+  );
 };
 
 export default Banner;

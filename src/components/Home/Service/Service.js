@@ -6,9 +6,7 @@ import { Link } from "react-router-dom";
 import "./Service.css";
 
 const Service = (props) => {
-    // console.log(props.service);
     const { _id, image, name, description } = props.service;
-
 
     return (
         <div className='service'>
@@ -23,8 +21,6 @@ const Service = (props) => {
                         <Link to={`/placeOrder/${_id}`}>
                             <Button variant="warning" >Buy Now</Button>
                         </Link>
-
-
                     </Card.Body>
                 </Card>
             </Col>
