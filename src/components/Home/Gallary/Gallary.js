@@ -21,9 +21,7 @@ const Gallary = () => {
                         <img className='w-100 mb-3' src={gallary1} alt="" />
                         <img className='w-100 mb-3' src={gallary2} alt="" />
                         <img className='w-100 mb-3' src={gallary3} alt="" />
-
                     </Col>
-
                     <Col lg={4}>
 
                         <img className='w-100 mb-3' src={gallary4} alt="" />

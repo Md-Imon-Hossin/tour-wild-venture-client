@@ -13,7 +13,7 @@ const PlaceOrder = () => {
     const { id } = useParams();
 
     useEffect(() => {
-        const url = `https://obscure-sierra-26455.herokuapp.com/${id}`
+        const url = `https://obscure-sierra-26455.herokuapp.com/services/${id}`
         fetch(url)
             .then(res => res.json())
             .then(data => setService(data))

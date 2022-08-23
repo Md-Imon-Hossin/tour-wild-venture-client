@@ -1,6 +1,6 @@
 # Wild Venture
 
-I build the project full-stack website using reactjs, react-bootstrap, react-router, nodeJs, firebase,expressJs, mongodb etc. This website is a tourism related (theme park, travel, vacation, etc).
+I build the project full-stack website using reactjs, react-bootstrap, react-router, nodeJs, firebase, expressJs, mongodb etc. This website is a tourism related (theme park, travel, vacation, etc).
 
 * Travio provide safe journey with family and friends.
 * We also provide visit to exotic places.
